@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body class="container">
+    <header class="header">
+      <nav>
+        <ul class="flex justify-content align-item">
+          <li>
+            <a href="/">
+              <button>Home</button>
+            </a>
+          </li>
+          <li>
+            <a href="/book/new">
+              <button>Add Books</button>
+            </a>
+          </li>
+          <li>
+            <a href="/book">
+              <button>All Books</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h1>Welcome to the AltBook Store.</h1>
+      <div class="flex justify-content align-item">
+        <div class="book">
+          <h2>Title: <%= book.title%></h2>
+          <p>Summary: <%= book.summary%></p>
+          <p>Pages: <%= book.pages%></p>
+          <p>Publication: <%= book.publication%></p>
+          <p>Category: <%= book.category%></p>
+          <p>Author: <%= book.author%></p>
+          <p>Like: <%= book.likes%></p>
+          <a href="/book/<%= book.id%>/edit">
+            <button>Edit</button>
+          </a>
+          <a href="/book/<%= book.id%>/delete">
+            <button>Delete</button>
+          </a>
+          <a href="/book/<%= book.id%>/likes">
+            <button>Like</button>
+          </a>
+          <a href="/book/<%= book.id%>/dislike">
+            <button>Dislike</button>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

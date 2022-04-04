@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body class="container">
+    <header class="header">
+      <nav>
+        <ul class="flex justify-content align-item">
+          <li>
+            <a href="/">
+              <button>Home</button>
+            </a>
+          </li>
+          <li>
+            <a href="/book">
+              <button>All Books</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h1>Welcome to the AltBook Store.</h1>
+      <div class="form">
+        <form action="/book/<%= book.id%>" method="post">
+          <input
+            type="text"
+            name="title"
+            id=""
+            placeholder="Enter Title"
+            value="<%= book.title%>"
+          />
+          <input
+            type="text"
+            name="summary"
+            id=""
+            placeholder="Enter Details"
+            value="<%= book.summary%>"
+          />
+          <input
+            type="number"
+            name="pages"
+            id=""
+            placeholder="Enter pages"
+            value="<%= book.pages%>"
+          />
+          <input
+            type="text"
+            name="publication"
+            id=""
+            placeholder="Enter Publication"
+            value="<%= book.publication%>"
+          />
+          <input
+            type="text"
+            name="category"
+            id=""
+            placeholder="Category"
+            value="<%= book.category%>"
+          />
+          <input
+            type="text"
+            name="author"
+            id=""
+            placeholder="Author Name"
+            value="<%= book.author%>"
+          />
+          <input type="submit" value="Update" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
